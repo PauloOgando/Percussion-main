@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Botón : MonoBehaviour
 {
-    public GameObject camara;
 
 
     public void LogIn()            // Cambiar a escena de Menu Principal
@@ -27,16 +26,6 @@ public class Botón : MonoBehaviour
     public void Jugar()            // Cambiar a escena de Niveles
     {
         SceneManager.LoadScene("Paises");
-    }
-
-    public void Siguiente()  // Cambia elección de nivel
-    {
-        Cámara.instance.moverDerecha();
-    }
-
-    public void Prev()  // Cambia elección de nivel
-    {
-        Cámara.instance.moverIzquierda();
     }
 
     public void Easy_Japon()            // Entrar a nivel fácil Japón
