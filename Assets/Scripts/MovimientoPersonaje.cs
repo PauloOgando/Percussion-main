@@ -8,7 +8,9 @@ public class MovimientoPersonaje : MonoBehaviour
 
     public float velocidadX = 0;
 
-    public bool canMove; 
+    public bool canMove;
+
+    public GameObject box;
 
     Rigidbody2D rb;
     // Start is called before the first frame update
@@ -37,6 +39,7 @@ public class MovimientoPersonaje : MonoBehaviour
         if (collision.gameObject.CompareTag("Taiko"))
         {
             canMove = false;
+            box.SetActive(true);
         }
     }
 }

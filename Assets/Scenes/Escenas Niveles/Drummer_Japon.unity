@@ -592,6 +592,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1138082387 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3061446105813405809, guid: 92950fd7a10a03a4e8458ee31fc0162c, type: 3}
+  m_PrefabInstance: {fileID: 3061446105503403798}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1288138226
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,8 +607,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1288138228}
   - component: {fileID: 1288138227}
-  - component: {fileID: 1288138229}
   - component: {fileID: 1288138230}
+  - component: {fileID: 1288138231}
   m_Layer: 0
   m_Name: Taiko Principal
   m_TagString: Taiko
@@ -678,19 +683,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1288138229
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1288138226}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.554924, y: 1.1377778, z: 0.2}
-  m_Center: {x: 1.0226126, y: 0, z: 0}
 --- !u!114 &1288138230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -703,6 +695,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19d20e5c82e3a064a9fb2349774a1d31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &1288138231
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288138226}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.9412546, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.1377778, y: 1.1377778}
+    newSize: {x: 1.1377778, y: 1.1377778}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.4484234, y: 1.1377778}
+  m_EdgeRadius: 0
 --- !u!1 &1541819979
 GameObject:
   m_ObjectHideFlags: 0
@@ -872,6 +890,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidadX: 0
   canMove: 0
+  box: {fileID: 1138082387}
 --- !u!1 &1659408616
 GameObject:
   m_ObjectHideFlags: 0
@@ -952,7 +971,103 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3061446105813405809, guid: 92950fd7a10a03a4e8458ee31fc0162c, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061446105813405818, guid: 92950fd7a10a03a4e8458ee31fc0162c, type: 3}
+      propertyPath: _speedWrite
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061446105813405818, guid: 92950fd7a10a03a4e8458ee31fc0162c, type: 3}
+      propertyPath: _sentences.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061446105813405818, guid: 92950fd7a10a03a4e8458ee31fc0162c, type: 3}
+      propertyPath: _sentences.Array.data[0]._2say
+      value: Finally, I arrived to Japan
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061446105813405818, guid: 92950fd7a10a03a4e8458ee31fc0162c, type: 3}
+      propertyPath: _sentences.Array.data[1]._2say
+      value: Konbanwa, dear Jaciel
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061446105813405818, guid: 92950fd7a10a03a4e8458ee31fc0162c, type: 3}
+      propertyPath: _sentences.Array.data[2]._2say
+      value: Who are you and how do you know my name?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061446105813405818, guid: 92950fd7a10a03a4e8458ee31fc0162c, type: 3}
+      propertyPath: _sentences.Array.data[3]._2say
+      value: I'm Miyamura and I'll be your sensei in the art of Taiko.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061446105813405818, guid: 92950fd7a10a03a4e8458ee31fc0162c, type: 3}
+      propertyPath: _sentences.Array.data[4]._2say
+      value: Be prepared for a rough lesson Jaciel.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061446105813405818, guid: 92950fd7a10a03a4e8458ee31fc0162c, type: 3}
+      propertyPath: _sentences.Array.data[5]._2say
+      value: But first, let me teach you the origin of this unique instrument
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061446105813405818, guid: 92950fd7a10a03a4e8458ee31fc0162c, type: 3}
+      propertyPath: _sentences.Array.data[4]._active
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061446105813405818, guid: 92950fd7a10a03a4e8458ee31fc0162c, type: 3}
+      propertyPath: _sentences.Array.data[5]._active
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061446105813405818, guid: 92950fd7a10a03a4e8458ee31fc0162c, type: 3}
+      propertyPath: _sentences.Array.data[1]._deactive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061446105813405818, guid: 92950fd7a10a03a4e8458ee31fc0162c, type: 3}
+      propertyPath: _sentences.Array.data[2]._deactive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061446105813405818, guid: 92950fd7a10a03a4e8458ee31fc0162c, type: 3}
+      propertyPath: _sentences.Array.data[3]._deactive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061446105813405818, guid: 92950fd7a10a03a4e8458ee31fc0162c, type: 3}
+      propertyPath: _sentences.Array.data[4]._deactive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061446105813405818, guid: 92950fd7a10a03a4e8458ee31fc0162c, type: 3}
+      propertyPath: _sentences.Array.data[2]._character
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061446105813405818, guid: 92950fd7a10a03a4e8458ee31fc0162c, type: 3}
+      propertyPath: _sentences.Array.data[3]._character
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061446105813405818, guid: 92950fd7a10a03a4e8458ee31fc0162c, type: 3}
+      propertyPath: _sentences.Array.data[4]._character
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061446105813405818, guid: 92950fd7a10a03a4e8458ee31fc0162c, type: 3}
+      propertyPath: _sentences.Array.data[5]._character
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061446105813405818, guid: 92950fd7a10a03a4e8458ee31fc0162c, type: 3}
+      propertyPath: _sentences.Array.data[0]._timeActive
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061446105813405818, guid: 92950fd7a10a03a4e8458ee31fc0162c, type: 3}
+      propertyPath: _sentences.Array.data[1]._timeActive
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061446105813405818, guid: 92950fd7a10a03a4e8458ee31fc0162c, type: 3}
+      propertyPath: _sentences.Array.data[2]._timeActive
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061446105813405818, guid: 92950fd7a10a03a4e8458ee31fc0162c, type: 3}
+      propertyPath: _sentences.Array.data[3]._timeActive
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061446105813405818, guid: 92950fd7a10a03a4e8458ee31fc0162c, type: 3}
+      propertyPath: _sentences.Array.data[4]._timeActive
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061446105813405818, guid: 92950fd7a10a03a4e8458ee31fc0162c, type: 3}
+      propertyPath: _sentences.Array.data[5]._timeActive
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3061446105813405821, guid: 92950fd7a10a03a4e8458ee31fc0162c, type: 3}
       propertyPath: m_Pivot.x
