@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class MovimientoPersonaje : MonoBehaviour
 {
+    public static MovimientoPersonaje instance;
+
     public float velocidadX = 0;
+
+    public bool canMove; 
 
     Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
+        canMove = true;
         rb = GetComponent<Rigidbody2D>();
         velocidadX = 5;
     }
@@ -17,6 +22,21 @@ public class MovimientoPersonaje : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = new Vector2(velocidadX, 0);
+        if (canMove)
+        {
+            rb.velocity = new Vector2(velocidadX, 0);
+        } else
+        {
+            rb.velocity = new Vector2(0, 0);
+        }
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Taiko"))
+        {
+            canMove = false;
+        }
     }
 }

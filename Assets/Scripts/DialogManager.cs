@@ -7,6 +7,8 @@ using TMPro;
 
 public class DialogManager : MonoBehaviour
 {
+
+    public static DialogManager instance;
     /*
      * El _dialogBox es opcional, es una caja
      * que rodea al texto, el script solo
