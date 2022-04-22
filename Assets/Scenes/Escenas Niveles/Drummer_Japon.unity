@@ -603,9 +603,10 @@ GameObject:
   - component: {fileID: 1288138228}
   - component: {fileID: 1288138227}
   - component: {fileID: 1288138229}
+  - component: {fileID: 1288138230}
   m_Layer: 0
   m_Name: Taiko Principal
-  m_TagString: Untagged
+  m_TagString: Taiko
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -690,6 +691,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.554924, y: 1.1377778, z: 0.2}
   m_Center: {x: 1.0226126, y: 0, z: 0}
+--- !u!114 &1288138230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288138226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19d20e5c82e3a064a9fb2349774a1d31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1541819979
 GameObject:
   m_ObjectHideFlags: 0
@@ -706,7 +719,7 @@ GameObject:
   - component: {fileID: 1541819985}
   m_Layer: 0
   m_Name: Personaje estatico
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -818,7 +831,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 2
 --- !u!61 &1541819984
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -829,7 +842,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000047683716, y: 0.047421098}
@@ -858,6 +871,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidadX: 0
+  canMove: 0
 --- !u!1 &1659408616
 GameObject:
   m_ObjectHideFlags: 0
@@ -935,6 +949,10 @@ PrefabInstance:
     - target: {fileID: 3061446105813405809, guid: 92950fd7a10a03a4e8458ee31fc0162c, type: 3}
       propertyPath: m_Name
       value: DialogManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061446105813405809, guid: 92950fd7a10a03a4e8458ee31fc0162c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3061446105813405821, guid: 92950fd7a10a03a4e8458ee31fc0162c, type: 3}
       propertyPath: m_Pivot.x
