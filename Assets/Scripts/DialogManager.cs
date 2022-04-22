@@ -44,6 +44,8 @@ public class DialogManager : MonoBehaviour
     [SerializeField]
     private float _speedWrite; //Tiempo que pasa entre que se escribe una letra y la otra. 
 
+    public GameObject btn;
+
     //private bool _enableDisableBox = false; 
     private int _index = 0; //Contador interno para saber por que frase vamos. 
 
@@ -152,6 +154,7 @@ public class DialogManager : MonoBehaviour
         {
             //si es la ultima frase, limpiamos el texto. 
             CleanText();
+            btn.SetActive(true);
         }
         return tiempoEspera;
     }
