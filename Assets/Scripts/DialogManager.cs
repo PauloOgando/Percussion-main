@@ -9,6 +9,8 @@ public class DialogManager : MonoBehaviour
 {
 
     public static DialogManager instance;
+
+    public bool startLevel = false;
     /*
      * El _dialogBox es opcional, es una caja
      * que rodea al texto, el script solo
@@ -46,6 +48,8 @@ public class DialogManager : MonoBehaviour
 
     public GameObject btn;
 
+    public GameObject tambores;
+
     //private bool _enableDisableBox = false; 
     private int _index = 0; //Contador interno para saber por que frase vamos. 
 
@@ -76,6 +80,7 @@ public class DialogManager : MonoBehaviour
             _timeLastWrite = Time.time;
             _timeNextWrite = Time.time + ContinueDialog();
         }
+
     }
 
     public void CleanText()
@@ -157,6 +162,16 @@ public class DialogManager : MonoBehaviour
             btn.SetActive(true);
         }
         return tiempoEspera;
+    }
+
+    public void Jugar()
+    {
+        if (!startLevel)
+        {
+            startLevel = true;
+            tambores.SetActive(true);
+        }
+        
     }
 }
 
