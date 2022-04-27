@@ -50,10 +50,15 @@ public class DialogManager : MonoBehaviour
 
     public GameObject tambores;
 
+    public GameObject circulos;
+
     //private bool _enableDisableBox = false; 
     private int _index = 0; //Contador interno para saber por que frase vamos. 
 
-
+    private void Awake()
+    {
+        instance = this;
+    }
     private void Start()
     {
         CleanText(); //Limpiamos el texto que se pueda encontrar en los textmeshpro
@@ -160,16 +165,23 @@ public class DialogManager : MonoBehaviour
             //si es la ultima frase, limpiamos el texto. 
             CleanText();
             btn.SetActive(true);
+            tambores.SetActive(true);
         }
         return tiempoEspera;
     }
 
     public void Jugar()
     {
+        
         if (!startLevel)
         {
             startLevel = true;
-            tambores.SetActive(true);
+            circulos.SetActive(true);
+            circulos.transform.GetChild(0).gameObject.SetActive(false);
+            circulos.transform.GetChild(1).gameObject.SetActive(false);
+            circulos.transform.GetChild(2).gameObject.SetActive(false);
+            circulos.transform.GetChild(3).gameObject.SetActive(false);
+            circulos.transform.GetChild(4).gameObject.SetActive(false);
         }
         
     }
