@@ -258,7 +258,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.0778947, y: 1.0778947}
+    oldSize: {x: 1.0502564, y: 1.0502564}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -525,7 +525,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.0778947, y: 1.0778947}
+    oldSize: {x: 1.0502564, y: 1.0502564}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -806,7 +806,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.0778947, y: 1.0778947}
+    oldSize: {x: 1.0502564, y: 1.0502564}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -993,7 +993,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.3
+  m_Radius: 0.25
 --- !u!61 &947921927
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1011,7 +1011,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.0778947, y: 1.0778947}
+    oldSize: {x: 1.0502564, y: 1.0502564}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1072,6 +1072,54 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &972674850
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 972674852}
+  - component: {fileID: 972674851}
+  m_Layer: 0
+  m_Name: LevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &972674851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 972674850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4152f0d882ff0b04d90c11a7907e7e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Song: {fileID: 0}
+  StartLevel: 0
+  tambores: {fileID: 1960344985}
+  circulos: {fileID: 379041048}
+--- !u!4 &972674852
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 972674850}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.012299538, y: 0.008900166, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1007695502
 GameObject:
   m_ObjectHideFlags: 0
@@ -1102,8 +1150,8 @@ Transform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5655289408641240131}
-  m_RootOrder: 3
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1007695504
 MonoBehaviour:
@@ -1188,7 +1236,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.3
+  m_Radius: 0.25
 --- !u!61 &1154765213
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1206,7 +1254,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.0778947, y: 1.0778947}
+    oldSize: {x: 1.0502564, y: 1.0502564}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1422,7 +1470,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.0778947, y: 1.0778947}
+    oldSize: {x: 1.0502564, y: 1.0502564}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1534,7 +1582,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.0778947, y: 1.0778947}
+    oldSize: {x: 1.0502564, y: 1.0502564}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1664,7 +1712,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.3
+  m_Radius: 0.25
 --- !u!61 &1547296764
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1682,7 +1730,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.0778947, y: 1.0778947}
+    oldSize: {x: 1.0502564, y: 1.0502564}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1792,7 +1840,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.3
+  m_Radius: 0.25
 --- !u!61 &1627592619
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1810,7 +1858,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.0778947, y: 1.0778947}
+    oldSize: {x: 1.0502564, y: 1.0502564}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1920,7 +1968,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.3
+  m_Radius: 0.25
 --- !u!61 &1935132719
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1938,8 +1986,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.0778947, y: 1.0778947}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 1.0502564, y: 1.0502564}
+    newSize: {x: 1.024, y: 1.024}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -1993,7 +2041,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.024, y: 1.024}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2106,14 +2154,14 @@ PrefabInstance:
     - target: {fileID: 1389628059380438636, guid: 342013fb60bdb8a4d9984b6662f24ab3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 5655289408641240127}
+      objectReference: {fileID: 972674851}
     - target: {fileID: 1389628059380438636, guid: 342013fb60bdb8a4d9984b6662f24ab3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Jugar
       objectReference: {fileID: 0}
     - target: {fileID: 1389628059380438636, guid: 342013fb60bdb8a4d9984b6662f24ab3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: DialogManager, Assembly-CSharp
+      value: LevelManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1389628059380438636, guid: 342013fb60bdb8a4d9984b6662f24ab3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -2232,21 +2280,5 @@ PrefabInstance:
 --- !u!1 &5655289408641240126 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6715830880437654435, guid: 342013fb60bdb8a4d9984b6662f24ab3, type: 3}
-  m_PrefabInstance: {fileID: 1389628059359043485}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5655289408641240127 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6715830880437654440, guid: 342013fb60bdb8a4d9984b6662f24ab3, type: 3}
-  m_PrefabInstance: {fileID: 1389628059359043485}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5655289408641240126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7dfa44f35f65ef944a8fd02cda84f27f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!224 &5655289408641240131 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 6715830880437654447, guid: 342013fb60bdb8a4d9984b6662f24ab3, type: 3}
   m_PrefabInstance: {fileID: 1389628059359043485}
   m_PrefabAsset: {fileID: 0}

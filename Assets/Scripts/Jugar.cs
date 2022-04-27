@@ -6,7 +6,7 @@ public class Jugar : MonoBehaviour
 {
     public static Jugar instance;
 
-    public float velocidadCirculos = 1;
+    public float velocidadCirculos = 3;
     public int[] VectorCirculos = {0, 1, 2, 3, 4, 5, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4};
 
     // Start is called before the first frame update
@@ -26,14 +26,15 @@ public class Jugar : MonoBehaviour
     void Update()
     {
         print("Update");
-        if (DialogManager.instance.startLevel)
+        if (LevelManager.instance.StartLevel)
         {
             print("Detecte el true");
             if (!IniciarCorrutina)
             {
                 print("Iniciando Corrutina");
-                StartCoroutine(MostrarCirculos());
                 IniciarCorrutina = true;
+                StartCoroutine(MostrarCirculos());
+                
             }
         }
     }
