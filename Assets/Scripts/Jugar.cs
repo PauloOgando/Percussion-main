@@ -6,7 +6,7 @@ public class Jugar : MonoBehaviour
 {
     public static Jugar instance;
 
-    public float velocidadCirculos = 3;
+    public float velocidadCirculos = 1;
     public int[] VectorCirculos = {0, 1, 2, 3, 4, 5, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4};
 
     // Start is called before the first frame update
@@ -15,7 +15,7 @@ public class Jugar : MonoBehaviour
         instance = this;
     }
 
-    private bool IniciarCorrutina = false;
+    /*private bool IniciarCorrutina = false;*/
 
     void Start()
     {
@@ -25,18 +25,18 @@ public class Jugar : MonoBehaviour
 
     void Update()
     {
-        print("Update");
+        /*
         if (LevelManager.instance.StartLevel)
         {
-            print("Detecte el true");
-            if (!IniciarCorrutina)
+            IniciarCorrutina = true;
+            if (IniciarCorrutina)
             {
                 print("Iniciando Corrutina");
-                IniciarCorrutina = true;
                 StartCoroutine(MostrarCirculos());
                 
             }
         }
+        */
     }
 
     public IEnumerator MostrarCirculos()
@@ -49,11 +49,14 @@ public class Jugar : MonoBehaviour
             }
             else
             {
+                print("Aqui ando");
                 gameObject.transform.GetChild(i).gameObject.SetActive(true);
                 yield return new WaitForSeconds(velocidadCirculos);
             }
         }
         yield return new WaitForSeconds(2);
     }
+
+
 
 }
