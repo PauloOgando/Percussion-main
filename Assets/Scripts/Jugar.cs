@@ -6,8 +6,8 @@ public class Jugar : MonoBehaviour
 {
     public static Jugar instance;
 
-    public float velocidadCirculos = 1;
-    public int[] VectorCirculos = {0, 1, 2, 3, 4, 5, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4};
+    private float velocidadCirculos = .7f;
+    private int[] VectorCirculos = {0, 1, 2, 3, 4, 5};
 
     // Start is called before the first frame update
     private void Awake()
@@ -19,7 +19,7 @@ public class Jugar : MonoBehaviour
 
     void Start()
     {
-        
+        Time.timeScale = LevelManager.instance.isPaused ? 0 : 1;
     }
     
 
@@ -49,13 +49,23 @@ public class Jugar : MonoBehaviour
             }
             else
             {
-                print("Aqui ando");
                 gameObject.transform.GetChild(i).gameObject.SetActive(true);
                 yield return new WaitForSeconds(velocidadCirculos);
             }
         }
         yield return new WaitForSeconds(2);
+        LevelManager.instance.DeployEndText(); //Checarlo con el profe
+        yield return new WaitForSeconds(3);
+        FinishLevel();
+
     }
+
+    public void FinishLevel()
+    {
+        /*LevelManager.instance.Song.Stop();*/
+        LevelManager.instance.DeployEndPanel();
+    }
+
 
 
 

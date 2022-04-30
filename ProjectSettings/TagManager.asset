@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Taiko
   - Activator
+  - NormalHit
+  - Destroyer
   layers:
   - Default
   - TransparentFX
