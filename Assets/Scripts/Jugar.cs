@@ -6,8 +6,9 @@ public class Jugar : MonoBehaviour
 {
     public static Jugar instance;
 
-    private float velocidadCirculos = .7f;
-    private int[] VectorCirculos = {0, 1, 2, 3, 4, 5};
+    public float velocidadCirculos = 1.4f;
+    public int[] VectorCirculos = {0, 1, 2, 4, 3, 0, 1, 2, 4, 3, 0, 1, 2, 4, 3, 0, 1, 2, 4, 3, 0, 1, 2, 4, 3, 0, 1, 2, 4, 3,
+                                    0, 1, 2, 4, 3, 0, 1, 2, 4, 3, 0, 1, 2};
 
     // Start is called before the first frame update
     private void Awake()
@@ -41,6 +42,8 @@ public class Jugar : MonoBehaviour
 
     public IEnumerator MostrarCirculos()
     {
+        yield return new WaitForSeconds(1.3f);
+        ChangeAnimation.instance.PlayAnimation();
         foreach (int i in VectorCirculos)
         {
             if (i == 5)
@@ -62,7 +65,8 @@ public class Jugar : MonoBehaviour
 
     public void FinishLevel()
     {
-        /*LevelManager.instance.Song.Stop();*/
+        LevelManager.instance.Song.Stop();
+        ChangeAnimation.instance.StopAnimation();
         LevelManager.instance.DeployEndPanel();
     }
 

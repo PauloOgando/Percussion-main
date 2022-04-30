@@ -55,7 +55,7 @@ public class LevelManager : MonoBehaviour
         {
             HowToPlay.SetActive(false);
         }
-        /*StartLevel = true;*/
+        LevelManager.instance.Song.Play();
         DialogManager.instance.gameObject.transform.GetChild(2).gameObject.SetActive(false); /*Boton Play*/
         DialogManager.instance.gameObject.transform.GetChild(3).gameObject.SetActive(false);
         Scorer.SetActive(true);
@@ -70,11 +70,11 @@ public class LevelManager : MonoBehaviour
         //Pause music of the level
         if (isPaused)
         {
-            //Song.Pause();
+            Song.Pause();
         }
         else
         {
-            //Song.Play();
+            Song.Play();
         }
     }
 
@@ -86,17 +86,17 @@ public class LevelManager : MonoBehaviour
 
     public void DeployEndText()
     {
-        if(Score < 2500)
+        if(Score < 7500)
         {
             DialogManager.instance.gameObject.transform.GetChild(8).gameObject.SetActive(true);
             EndText.text = "You still need to learn a lot Jaciel, that was shameful";
         }
-        if (Score > 2500 && Score < 5000)
+        if (Score > 7500 && Score < 12500)
         {
             DialogManager.instance.gameObject.transform.GetChild(8).gameObject.SetActive(true);
             EndText.text = "That was pretty good for you, but you are not at my level";
         }
-        if (Score >= 5000)
+        if (Score >= 12500)
         {
             DialogManager.instance.gameObject.transform.GetChild(8).gameObject.SetActive(true);
             EndText.text = "I did not expect you to be this good, that was marvelous";
@@ -123,6 +123,8 @@ public class LevelManager : MonoBehaviour
 
     public void Fail()
     {
+        Score -= _Hit;
+        ScoreText.text = Score.ToString();
         StartCoroutine(ShowFailText());
         
     }
