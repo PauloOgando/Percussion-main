@@ -762,6 +762,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2406105794107249157, guid: 06d8f38af8f5bac4ab6b15a764bc0356, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3371803289419935496, guid: 06d8f38af8f5bac4ab6b15a764bc0356, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -818,6 +822,10 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 8366201842555964255, guid: 06d8f38af8f5bac4ab6b15a764bc0356, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06d8f38af8f5bac4ab6b15a764bc0356, type: 3}
 --- !u!1001 &2400391093697868473
@@ -846,6 +854,10 @@ PrefabInstance:
     - target: {fileID: 8013162928319004295, guid: f1cf59bb7560ca545bde68ad2bf2bc20, type: 3}
       propertyPath: m_Name
       value: DialogManagerFinal
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013162928319004295, guid: f1cf59bb7560ca545bde68ad2bf2bc20, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8013162928319004299, guid: f1cf59bb7560ca545bde68ad2bf2bc20, type: 3}
       propertyPath: m_Pivot.x

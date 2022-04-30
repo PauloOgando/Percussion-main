@@ -362,6 +362,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogManagerFinal
       objectReference: {fileID: 0}
+    - target: {fileID: 8013162928319004295, guid: f1cf59bb7560ca545bde68ad2bf2bc20, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8013162928319004299, guid: f1cf59bb7560ca545bde68ad2bf2bc20, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -452,6 +456,11 @@ PrefabInstance:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 512851041277626242, guid: d15b5ebf3ab68ec46acbc705cc8982ee, type: 3}
   m_PrefabInstance: {fileID: 1773454004}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &728999081 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8013162928319004295, guid: f1cf59bb7560ca545bde68ad2bf2bc20, type: 3}
+  m_PrefabInstance: {fileID: 649388753}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &974823467
 GameObject:
@@ -874,7 +883,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Master
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 2c1c52aaca2b76a4eb3369ec5ae7eea1, type: 3}
 --- !u!1001 &1362093741
 PrefabInstance:
@@ -1152,6 +1162,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5671187431134657666, guid: 06d8f38af8f5bac4ab6b15a764bc0356, type: 3}
+      propertyPath: box
+      value: 
+      objectReference: {fileID: 728999081}
     - target: {fileID: 7643505546254473629, guid: 06d8f38af8f5bac4ab6b15a764bc0356, type: 3}
       propertyPath: m_Name
       value: Principal
