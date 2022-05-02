@@ -22,7 +22,7 @@ public class Impact : MonoBehaviour
     {
         if (Input.GetKeyDown(Key))
         {
-            print("Presionado");
+            print("Funciono");
             if (Activator)
             {
                 if (_NiceHit)
@@ -39,7 +39,6 @@ public class Impact : MonoBehaviour
 
     public void PerfectHit()
     {
-        print("Perfect metodo");
         LevelManager.instance.NiceHit();
         _WasHit = true;
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
@@ -47,7 +46,6 @@ public class Impact : MonoBehaviour
     }
     public void NormalHit()
     {
-        print("Normal metodo");
         LevelManager.instance.Hit();
         _WasHit = true;
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
@@ -56,7 +54,6 @@ public class Impact : MonoBehaviour
 
     public void WasHit()
     {
-        print("WasHitTrue");
         gameObject.GetComponent<SpriteRenderer>().enabled = true;
         gameObject.SetActive(false);
         _WasHit = false;
@@ -66,7 +63,6 @@ public class Impact : MonoBehaviour
 
     public void WasNotHit()
     {
-        print("WasNotHitTrue");
         LevelManager.instance.Fail();
         gameObject.GetComponent<SpriteRenderer>().enabled = true;
         gameObject.SetActive(false);
@@ -82,10 +78,6 @@ public class Impact : MonoBehaviour
             Activator = true;
             _NiceHit = true;
             _NormalHit = false;
-            if (_NiceHit)
-            {
-                print("NiceHit true");
-            }
         }
 
         if (collision.tag == "NormalHit")
@@ -93,10 +85,6 @@ public class Impact : MonoBehaviour
             Activator = true;
             _NormalHit = true;
             _NiceHit = false;
-            if (_NormalHit)
-            {
-                print("NormalHit true");
-            }
         }
         if (collision.tag == "Destroyer")
         {

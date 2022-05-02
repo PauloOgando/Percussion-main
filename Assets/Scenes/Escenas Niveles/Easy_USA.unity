@@ -657,6 +657,94 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4442953632974131448, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: m_Size.x
+      value: 1.1377778
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953632974131448, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: m_Size.y
+      value: 1.1377778
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953632974131448, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3bbcc2782a3a7424bb92775a2cc7c13c, type: 3}
+    - target: {fileID: 4442953632974131448, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953633503110472, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: m_Size.x
+      value: 1.1377778
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953633503110472, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: m_Size.y
+      value: 1.1377778
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953633503110472, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3bbcc2782a3a7424bb92775a2cc7c13c, type: 3}
+    - target: {fileID: 4442953633503110472, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953633942033667, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953633942033695, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: m_Size.x
+      value: 20.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953633942033695, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: m_Size.y
+      value: 20.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953633942033695, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3bbcc2782a3a7424bb92775a2cc7c13c, type: 3}
+    - target: {fileID: 4442953633942033695, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953633961312628, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: m_Size.x
+      value: 1.1377778
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953633961312628, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: m_Size.y
+      value: 1.1377778
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953633961312628, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3bbcc2782a3a7424bb92775a2cc7c13c, type: 3}
+    - target: {fileID: 4442953633961312628, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953634477775190, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: m_Size.x
+      value: 1.1377778
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953634477775190, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: m_Size.y
+      value: 1.1377778
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953634477775190, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3bbcc2782a3a7424bb92775a2cc7c13c, type: 3}
+    - target: {fileID: 4442953634477775190, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953634477775193, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
 --- !u!1 &1165452596 stripped
@@ -719,6 +807,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tambores
       objectReference: {fileID: 0}
+    - target: {fileID: 512851041277626242, guid: d15b5ebf3ab68ec46acbc705cc8982ee, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 512851041392204305, guid: d15b5ebf3ab68ec46acbc705cc8982ee, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cf53c3e9270fbd949afb34442a038436, type: 3}
+    - target: {fileID: 512851041642982839, guid: d15b5ebf3ab68ec46acbc705cc8982ee, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cf53c3e9270fbd949afb34442a038436, type: 3}
+    - target: {fileID: 512851041695000038, guid: d15b5ebf3ab68ec46acbc705cc8982ee, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cf53c3e9270fbd949afb34442a038436, type: 3}
+    - target: {fileID: 512851042082679685, guid: d15b5ebf3ab68ec46acbc705cc8982ee, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cf53c3e9270fbd949afb34442a038436, type: 3}
+    - target: {fileID: 512851042288967187, guid: d15b5ebf3ab68ec46acbc705cc8982ee, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cf53c3e9270fbd949afb34442a038436, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d15b5ebf3ab68ec46acbc705cc8982ee, type: 3}
 --- !u!1 &1282297807
@@ -732,7 +844,7 @@ GameObject:
   - component: {fileID: 1282297809}
   - component: {fileID: 1282297808}
   m_Layer: 0
-  m_Name: Taiko
+  m_Name: Snare
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -779,7 +891,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 40e9d4d765c8ba1449afab92f774eedc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a5ffa358b25d1a64483d1c8b99768b33, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1100,6 +1212,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5034805706067659952, guid: d6b02c861e2644a4cbfae6300fef6781, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a5ffa358b25d1a64483d1c8b99768b33, type: 3}
     - target: {fileID: 5034805706067659953, guid: d6b02c861e2644a4cbfae6300fef6781, type: 3}
       propertyPath: m_Name
       value: Instrumento Principal
