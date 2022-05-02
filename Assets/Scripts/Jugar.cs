@@ -6,8 +6,9 @@ public class Jugar : MonoBehaviour
 {
     public static Jugar instance;
 
-    public float velocidadCirculos = 1;
-    public int[] VectorCirculos = {0, 1, 2, 3, 4, 5, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4};
+    public float velocidadCirculos = 1.4f;
+    public int[] VectorCirculos = {0, 1, 2, 4, 3, 0, 1, 2, 4, 3, 0, 1, 2, 4, 3, 0, 1, 2, 4, 3, 0, 1, 2, 4, 3, 0, 1, 2, 4, 3,
+                                    0, 1, 2, 4, 3, 0, 1, 2, 4, 3, 0, 1, 2};
 
     // Start is called before the first frame update
     private void Awake()
@@ -15,31 +16,34 @@ public class Jugar : MonoBehaviour
         instance = this;
     }
 
-    private bool IniciarCorrutina = false;
+    /*private bool IniciarCorrutina = false;*/
 
     void Start()
     {
-        
+        Time.timeScale = LevelManager.instance.isPaused ? 0 : 1;
     }
     
 
     void Update()
     {
-        print("Update");
-        if (DialogManager.instance.startLevel)
+        /*
+        if (LevelManager.instance.StartLevel)
         {
-            print("Detecte el true");
-            if (!IniciarCorrutina)
+            IniciarCorrutina = true;
+            if (IniciarCorrutina)
             {
                 print("Iniciando Corrutina");
                 StartCoroutine(MostrarCirculos());
-                IniciarCorrutina = true;
+                
             }
         }
+        */
     }
 
     public IEnumerator MostrarCirculos()
     {
+        yield return new WaitForSeconds(1.3f);
+        ChangeAnimation.instance.PlayAnimation();
         foreach (int i in VectorCirculos)
         {
             if (i == 5)
@@ -53,6 +57,20 @@ public class Jugar : MonoBehaviour
             }
         }
         yield return new WaitForSeconds(2);
+        LevelManager.instance.DeployEndText(); //Checarlo con el profe
+        yield return new WaitForSeconds(3);
+        FinishLevel();
+
     }
+
+    public void FinishLevel()
+    {
+        LevelManager.instance.Song.Stop();
+        ChangeAnimation.instance.StopAnimation();
+        LevelManager.instance.DeployEndPanel();
+    }
+
+
+
 
 }

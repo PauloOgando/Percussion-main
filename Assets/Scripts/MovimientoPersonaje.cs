@@ -6,9 +6,9 @@ public class MovimientoPersonaje : MonoBehaviour
 {
     public static MovimientoPersonaje instance;
 
-    public float velocidadX = 0;
+    private float velocidadX = 0;
 
-    public bool canMove;
+    private bool canMove;
 
     public GameObject box;
 

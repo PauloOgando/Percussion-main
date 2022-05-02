@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Taiko
+  - Activator
+  - NormalHit
+  - Destroyer
   layers:
   - Default
   - TransparentFX

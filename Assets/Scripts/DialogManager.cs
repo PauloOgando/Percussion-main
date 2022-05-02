@@ -10,7 +10,6 @@ public class DialogManager : MonoBehaviour
 
     public static DialogManager instance;
 
-    public bool startLevel = false;
     /*
      * El _dialogBox es opcional, es una caja
      * que rodea al texto, el script solo
@@ -45,12 +44,6 @@ public class DialogManager : MonoBehaviour
 
     [SerializeField]
     private float _speedWrite; //Tiempo que pasa entre que se escribe una letra y la otra. 
-
-    public GameObject btn;
-
-    public GameObject tambores;
-
-    public GameObject circulos;
 
     //private bool _enableDisableBox = false; 
     private int _index = 0; //Contador interno para saber por que frase vamos. 
@@ -164,26 +157,12 @@ public class DialogManager : MonoBehaviour
         {
             //si es la ultima frase, limpiamos el texto. 
             CleanText();
-            btn.SetActive(true);
-            tambores.SetActive(true);
+            gameObject.transform.GetChild(2).gameObject.SetActive(true);
+            gameObject.transform.GetChild(3).gameObject.SetActive(true);
+            LevelManager.instance.tambores.SetActive(true);
         }
         return tiempoEspera;
     }
-
-    public void Jugar()
-    {
-        
-        if (!startLevel)
-        {
-            startLevel = true;
-            circulos.SetActive(true);
-            circulos.transform.GetChild(0).gameObject.SetActive(false);
-            circulos.transform.GetChild(1).gameObject.SetActive(false);
-            circulos.transform.GetChild(2).gameObject.SetActive(false);
-            circulos.transform.GetChild(3).gameObject.SetActive(false);
-            circulos.transform.GetChild(4).gameObject.SetActive(false);
-        }
-        
-    }
+    
 }
 
