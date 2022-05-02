@@ -84,10 +84,13 @@ public class Red : MonoBehaviour
         forma.AddField("email", email);
         forma.AddField("sexo", sexo);
 
-        /*https ://143.198.157.129/CapturaDatos/recibeDatosNube.php */
+        /*http ://143.198.157.129/CapturaDatos/recibeDatosNube.php */
+        //https ://pwt-beta.000webhostapp.com/CapturaDatos/recibeDatosNube.php
 
 
-        UnityWebRequest request = UnityWebRequest.Post("https://pwt-beta.000webhostapp.com/CapturaDatos/recibeDatosNube.php", forma);
+
+
+        UnityWebRequest request = UnityWebRequest.Post("http://143.198.157.129/CapturaDatos/recibeDatosNube.php", forma);
         yield return request.SendWebRequest();
         //....despues de cierto tiempo
         if (request.result == UnityWebRequest.Result.Success)

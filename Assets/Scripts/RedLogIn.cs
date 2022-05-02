@@ -73,11 +73,12 @@ public class RedLogIn : MonoBehaviour
         forma.AddField("nombreUsuario", usuario);
         forma.AddField("contrasena", contrasena);
 
+        //http ://143.198.157.129/CapturaDatos/IniciaSesion.php
+        //https ://pwt-beta.000webhostapp.com/CapturaDatos/IniciaSesion.php
 
 
 
-
-        UnityWebRequest request = UnityWebRequest.Post("https://pwt-beta.000webhostapp.com/CapturaDatos/IniciaSesion.php", forma);
+        UnityWebRequest request = UnityWebRequest.Post("http://143.198.157.129/CapturaDatos/IniciaSesion.php", forma);
         yield return request.SendWebRequest();
         //....despues de cierto tiempo
         if (request.result == UnityWebRequest.Result.Success)
