@@ -24,11 +24,20 @@ public class RedLogIn : MonoBehaviour
     public TMP_InputField textoUsuario;
     public TMP_InputField textoContrasena;
 
+    public string usuarioLI = "Null";
+
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
 
     public string regresaUsuario()
     {
         instance = this;
         string usuario = textoUsuario.text;
+
         return usuario;
     }
 
@@ -53,6 +62,11 @@ public class RedLogIn : MonoBehaviour
         string usuario = textoUsuario.text;
         string contrasena = textoContrasena.text;
 
+        usuarioLI = usuario;
+
+        PlayerPrefs.SetString("Usuario", usuarioLI);
+        PlayerPrefs.Save();
+
 
         //Crear un objeto con los datos
         WWWForm forma = new WWWForm();
@@ -63,7 +77,7 @@ public class RedLogIn : MonoBehaviour
 
 
 
-        UnityWebRequest request = UnityWebRequest.Post("http://localhost/CapturaDatos/IniciaSesion.php", forma);
+        UnityWebRequest request = UnityWebRequest.Post("https://pwt-beta.000webhostapp.com/CapturaDatos/IniciaSesion.php", forma);
         yield return request.SendWebRequest();
         //....despues de cierto tiempo
         if (request.result == UnityWebRequest.Result.Success)
@@ -74,12 +88,14 @@ public class RedLogIn : MonoBehaviour
             print("*" + texto.Trim() + "*");
 
 
-            if (texto.Trim() == "Success") {
+            if (texto.Trim() == "Success")
+            {
 
                 SceneManager.LoadScene("Menu_Principal");
 
 
-            } else
+            }
+            else
             {
                 print("Incorrecto");
             }
@@ -88,11 +104,6 @@ public class RedLogIn : MonoBehaviour
         {
             resultado.text = "Error: " + request.ToString();
         }
-    }
-
-    private void imprimirTexto(string texto)
-    {
-        print(texto);
     }
 
 
