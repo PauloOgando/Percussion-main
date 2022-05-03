@@ -33,6 +33,6 @@ public class HUDUsuario : MonoBehaviour
 
     public void ActualizarNombreUsuario() {  
         string usuario = RedLogIn.instance.usuarioLI;
-        txtUsuario.text = "p";
+        txtUsuario.text = usuario;
     }
 }

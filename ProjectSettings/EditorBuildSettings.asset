@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Settings.unity
     guid: 030dabe3e7b8e7e4da8b5ef90f7c0793
   - enabled: 0
-    path: Assets/Scenes/Paises.unity
+    path: 
     guid: 1913ebdf657c4d6429eaf84c5a1d4545
   - enabled: 1
     path: Assets/Scenes/Escenas Niveles/Easy_Japon.unity
@@ -50,4 +50,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Escenas Niveles/Easy_USA.unity
     guid: 4b9158420b8b6e64b9b21d6afa6b89a1
+  - enabled: 1
+    path: Assets/Scenes/PAS.unity
+    guid: 97f91b038815b4f248daefcf48c94385
+  - enabled: 1
+    path: Assets/Scenes/Leaderboard.unity
+    guid: a0ec95f244c32444e924d1f79b7bb099
   m_configObjects: {}

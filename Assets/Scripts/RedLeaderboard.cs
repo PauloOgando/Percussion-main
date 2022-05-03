@@ -51,7 +51,7 @@ public class RedLeaderboard : MonoBehaviour
 
 
 
-        UnityWebRequest request = UnityWebRequest.Post("http://localhost/CapturaDatos/LeaderboardDM.php", forma);
+        UnityWebRequest request = UnityWebRequest.Post("http://143.198.157.129/CapturaDatos/LeaderboardDM.php", forma);
         yield return request.SendWebRequest();
         //....despues de cierto tiempo
         if (request.result == UnityWebRequest.Result.Success)
@@ -86,7 +86,7 @@ public class RedLeaderboard : MonoBehaviour
         //forma.AddField("nombreUsuario", usuario);
 
 
-        UnityWebRequest request = UnityWebRequest.Post("http://localhost/CapturaDatos/LeaderboardF.php", forma);
+        UnityWebRequest request = UnityWebRequest.Post("http://143.198.157.129/CapturaDatos/LeaderboardF.php", forma);
         yield return request.SendWebRequest();
         //....despues de cierto tiempo
         if (request.result == UnityWebRequest.Result.Success)

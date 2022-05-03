@@ -60,6 +60,16 @@ public class BotonPaises : MonoBehaviour
         SceneManager.LoadScene("Drummer_Africa");
     }
 
+    public void Leaderboard()            // Ir a escena de Leaderboard
+    {
+        SceneManager.LoadScene("Leaderboard");
+    }
+
+    public void PAS()            // Ir a escena de About PAS
+    {
+        SceneManager.LoadScene("PAS");
+    }
+
 
 
 }

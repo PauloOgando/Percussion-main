@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
@@ -16,10 +18,15 @@ public class LevelManager : MonoBehaviour
     private int _NiceHit = 200;
     private int _Hit = 100;
 
+    public string horaInicioS;
+    public string horaFinS;
+
     public TextMeshProUGUI ScoreText;
     public TextMeshProUGUI FailText;
     public TextMeshProUGUI EndText;
     public TextMeshProUGUI FinalScore;
+
+    public TextMeshProUGUI resultado;
 
     /*public bool StartLevel = false;*/
 
@@ -37,7 +44,7 @@ public class LevelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -55,6 +62,7 @@ public class LevelManager : MonoBehaviour
         {
             HowToPlay.SetActive(false);
         }
+        horaInicioS = System.DateTime.Now.Hour.ToString("00") + ":" + System.DateTime.Now.Minute.ToString("00") + ":" + System.DateTime.Now.Second.ToString("00");
         LevelManager.instance.Song.Play();
         DialogManager.instance.gameObject.transform.GetChild(2).gameObject.SetActive(false); /*Boton Play*/
         DialogManager.instance.gameObject.transform.GetChild(3).gameObject.SetActive(false);
@@ -86,7 +94,7 @@ public class LevelManager : MonoBehaviour
 
     public void DeployEndText()
     {
-        if(Score < 7500)
+        if (Score < 7500)
         {
             DialogManager.instance.gameObject.transform.GetChild(8).gameObject.SetActive(true);
             EndText.text = "You still need to learn a lot Jaciel, that was shameful";
@@ -103,7 +111,7 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    public void DeployEndPanel ()
+    public void DeployEndPanel()
     {
         DialogManager.instance.gameObject.transform.GetChild(8).gameObject.SetActive(false);
         DialogManager.instance.gameObject.transform.GetChild(9).gameObject.SetActive(true);
@@ -126,7 +134,7 @@ public class LevelManager : MonoBehaviour
         Score -= _Hit;
         ScoreText.text = Score.ToString();
         StartCoroutine(ShowFailText());
-        
+
     }
 
     public IEnumerator ShowFailText()
@@ -140,7 +148,63 @@ public class LevelManager : MonoBehaviour
     public void EndLevel()
     {
         //Aqui iria el registro de la hora final 
-        //Registrar puntuacion final tambien 
+        //Registrar puntuacion final tambien
+
+        //Registro de la hora final 
+        horaFinS = System.DateTime.Now.Hour.ToString("00") + ":" + System.DateTime.Now.Minute.ToString("00") + ":" + System.DateTime.Now.Second.ToString("00");
+
+        EnviarDatos();
+
         SceneManager.LoadScene("Menu_Principal");
+    }
+
+    //Enviar los datos al servidor(click del boton)
+    public void EnviarDatos()
+    {
+        StartCoroutine(SubirDatos());
+    }
+
+    private IEnumerator SubirDatos()
+    {
+        //Recuperar los datos
+
+        int idNivelP = 1;
+        string horaInicio = horaInicioS;
+        string horaFin = horaFinS;
+        int puntuacion = Score;
+
+        string usuario = PlayerPrefs.GetString("Usuario", "NULL");
+        RedLogIn.instance.usuarioLI = usuario;
+
+
+
+        //Crear un objeto con los datos
+        WWWForm forma = new WWWForm();
+        forma.AddField("idNivelP", idNivelP);
+        forma.AddField("nombreUsuario", usuario);
+        forma.AddField("horaInicio", horaInicio);
+        forma.AddField("horaFin", horaFin);
+        forma.AddField("puntuacion", puntuacion);
+
+        //http ://143.198.157.129/CapturaDatos/IniciaSesion.php
+        //https ://pwt-beta.000webhostapp.com/CapturaDatos/IniciaSesion.php
+
+
+
+        UnityWebRequest request = UnityWebRequest.Post("http://143.198.157.129/CapturaDatos/SubeNivelesFacil.php", forma);
+        yield return request.SendWebRequest();
+        //....despues de cierto tiempo
+        if (request.result == UnityWebRequest.Result.Success)
+        {
+            string texto = request.downloadHandler.text;
+            resultado.text = texto;
+
+        }
+        else
+        {
+            resultado.text = "Error: " + request.ToString();
+        }
+
+        print(resultado);
     }
 }
