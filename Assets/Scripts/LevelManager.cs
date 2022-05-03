@@ -21,6 +21,9 @@ public class LevelManager : MonoBehaviour
     public string horaInicioS;
     public string horaFinS;
 
+    public int nivelS;
+    public int dificultad;
+
     public TextMeshProUGUI ScoreText;
     public TextMeshProUGUI FailText;
     public TextMeshProUGUI EndText;
@@ -44,7 +47,7 @@ public class LevelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        horaInicioS = System.DateTime.Now.Hour.ToString("00") + ":" + System.DateTime.Now.Minute.ToString("00") + ":" + System.DateTime.Now.Second.ToString("00");
     }
 
     // Update is called once per frame
@@ -62,12 +65,13 @@ public class LevelManager : MonoBehaviour
         {
             HowToPlay.SetActive(false);
         }
-        horaInicioS = System.DateTime.Now.Hour.ToString("00") + ":" + System.DateTime.Now.Minute.ToString("00") + ":" + System.DateTime.Now.Second.ToString("00");
+        
         LevelManager.instance.Song.Play();
         DialogManager.instance.gameObject.transform.GetChild(2).gameObject.SetActive(false); /*Boton Play*/
         DialogManager.instance.gameObject.transform.GetChild(3).gameObject.SetActive(false);
         Scorer.SetActive(true);
         StartCoroutine(circulos.GetComponent<Jugar>().MostrarCirculos());
+
     }
 
     public void Pause()
@@ -161,14 +165,14 @@ public class LevelManager : MonoBehaviour
     //Enviar los datos al servidor(click del boton)
     public void EnviarDatos()
     {
-        StartCoroutine(SubirDatos());
+        StartCoroutine(SubirDatosF());
     }
 
-    private IEnumerator SubirDatos()
+    private IEnumerator SubirDatosF()
     {
         //Recuperar los datos
 
-        int idNivelP = 1;
+        int idNivelP = nivelS;
         string horaInicio = horaInicioS;
         string horaFin = horaFinS;
         int puntuacion = Score;
@@ -190,21 +194,20 @@ public class LevelManager : MonoBehaviour
         //https ://pwt-beta.000webhostapp.com/CapturaDatos/IniciaSesion.php
 
 
-
-        UnityWebRequest request = UnityWebRequest.Post("http://143.198.157.129/CapturaDatos/SubeNivelesFacil.php", forma);
-        yield return request.SendWebRequest();
-        //....despues de cierto tiempo
-        if (request.result == UnityWebRequest.Result.Success)
+        if (dificultad == 1)
         {
-            string texto = request.downloadHandler.text;
-            resultado.text = texto;
-
-        }
-        else
+            UnityWebRequest request = UnityWebRequest.Post("http://143.198.157.129/CapturaDatos/SubeNivelesFacil.php", forma);
+            yield return request.SendWebRequest();
+            //....despues de cierto tiempo
+        } else
         {
-            resultado.text = "Error: " + request.ToString();
+            UnityWebRequest request = UnityWebRequest.Post("http://143.198.157.129/CapturaDatos/SubeNivelesDM.php", forma);
+            yield return request.SendWebRequest();
+            //....despues de cierto tiempo
         }
 
-        print(resultado);
+
     }
+
+
 }

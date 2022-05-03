@@ -253,6 +253,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 90570883}
     - target: {fileID: 5157808567723003503, guid: d33b1c37893d0a646baaea76011a4277, type: 3}
+      propertyPath: nivelS
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157808567723003503, guid: d33b1c37893d0a646baaea76011a4277, type: 3}
       propertyPath: EndText
       value: 
       objectReference: {fileID: 1812109862}
@@ -284,6 +288,10 @@ PrefabInstance:
       propertyPath: PausePanel
       value: 
       objectReference: {fileID: 1453855909}
+    - target: {fileID: 5157808567723003503, guid: d33b1c37893d0a646baaea76011a4277, type: 3}
+      propertyPath: dificultad
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d33b1c37893d0a646baaea76011a4277, type: 3}
 --- !u!114 &432460876 stripped
