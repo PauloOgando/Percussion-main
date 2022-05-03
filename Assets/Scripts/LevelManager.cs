@@ -47,7 +47,7 @@ public class LevelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        horaInicioS = System.DateTime.Now.Hour.ToString("00") + ":" + System.DateTime.Now.Minute.ToString("00") + ":" + System.DateTime.Now.Second.ToString("00");
     }
 
     // Update is called once per frame
@@ -65,7 +65,7 @@ public class LevelManager : MonoBehaviour
         {
             HowToPlay.SetActive(false);
         }
-        horaInicioS = System.DateTime.Now.Hour.ToString("00") + ":" + System.DateTime.Now.Minute.ToString("00") + ":" + System.DateTime.Now.Second.ToString("00");
+        
         LevelManager.instance.Song.Play();
         DialogManager.instance.gameObject.transform.GetChild(2).gameObject.SetActive(false); /*Boton Play*/
         DialogManager.instance.gameObject.transform.GetChild(3).gameObject.SetActive(false);
