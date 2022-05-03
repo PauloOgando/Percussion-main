@@ -635,7 +635,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2dbb2460e77665f4e92e5c80082c2727, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9ce6a07703b1d5d4e8c77844a1bf9dfe, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -940,6 +940,86 @@ PrefabInstance:
     - target: {fileID: 4442953632752214869, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953632752214870, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: WaitTime
+      value: 4.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953632752214870, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: velocidadCirculos
+      value: 0.5625
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953632752214870, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: VectorCirculos.Array.size
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953632752214870, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: VectorCirculos.Array.data[43]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953632752214870, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: VectorCirculos.Array.data[44]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953632752214870, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: VectorCirculos.Array.data[45]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953632752214870, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: VectorCirculos.Array.data[46]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953632752214870, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: VectorCirculos.Array.data[47]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953632752214870, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: VectorCirculos.Array.data[48]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953632752214870, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: VectorCirculos.Array.data[49]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953632752214870, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: VectorCirculos.Array.data[50]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953632752214870, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: VectorCirculos.Array.data[51]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953632752214870, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: VectorCirculos.Array.data[52]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953632752214870, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: VectorCirculos.Array.data[53]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953632752214870, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: VectorCirculos.Array.data[54]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953632752214870, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: VectorCirculos.Array.data[55]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953632752214870, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: VectorCirculos.Array.data[56]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953632752214870, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: VectorCirculos.Array.data[57]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953632752214870, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: VectorCirculos.Array.data[58]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953632752214870, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: VectorCirculos.Array.data[59]
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}

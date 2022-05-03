@@ -26,7 +26,7 @@ public class LevelManager : MonoBehaviour
     public TextMeshProUGUI EndText;
     public TextMeshProUGUI FinalScore;
 
-    public TextMeshProUGUI resultado;
+    private TextMeshProUGUI resultado;
 
     /*public bool StartLevel = false;*/
 

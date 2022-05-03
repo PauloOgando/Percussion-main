@@ -340,8 +340,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 1cdf78fe34c4ce54f93c61a7f3c64738, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -657,6 +657,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4442953632752214870, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: WaitTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953632752214870, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: velocidadCirculos
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953632752214870, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: VectorCirculos.Array.size
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953632752214870, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: VectorCirculos.Array.data[43]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953632752214870, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: VectorCirculos.Array.data[44]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953632752214870, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: VectorCirculos.Array.data[45]
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4442953632974131448, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
       propertyPath: m_Size.x
       value: 1.1377778
@@ -890,7 +914,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: a5ffa358b25d1a64483d1c8b99768b33, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -910,7 +934,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1282297807}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.61, y: -4.87, z: 0}
+  m_LocalPosition: {x: 3.61, y: -4.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1044,7 +1068,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000052292433204931, guid: 2c1c52aaca2b76a4eb3369ec5ae7eea1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.24
+      value: -3.52
       objectReference: {fileID: 0}
     - target: {fileID: 4000052292433204931, guid: 2c1c52aaca2b76a4eb3369ec5ae7eea1, type: 3}
       propertyPath: m_LocalPosition.z

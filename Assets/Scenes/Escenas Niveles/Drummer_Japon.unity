@@ -379,6 +379,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4442953632752214870, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
+      propertyPath: WaitTime
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442953632752214870, guid: d3a68c72c0e25934a83754fa5c5d196d, type: 3}
       propertyPath: velocidadCirculos
       value: 0.7
       objectReference: {fileID: 0}
