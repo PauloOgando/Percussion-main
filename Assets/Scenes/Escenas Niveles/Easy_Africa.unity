@@ -853,6 +853,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tambores
       objectReference: {fileID: 0}
+    - target: {fileID: 512851041277626242, guid: d15b5ebf3ab68ec46acbc705cc8982ee, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 512851041392204305, guid: d15b5ebf3ab68ec46acbc705cc8982ee, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 76b65abbe2347554f89d8de59df63d64, type: 3}
+    - target: {fileID: 512851041642982839, guid: d15b5ebf3ab68ec46acbc705cc8982ee, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 76b65abbe2347554f89d8de59df63d64, type: 3}
+    - target: {fileID: 512851041695000038, guid: d15b5ebf3ab68ec46acbc705cc8982ee, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 76b65abbe2347554f89d8de59df63d64, type: 3}
+    - target: {fileID: 512851042082679685, guid: d15b5ebf3ab68ec46acbc705cc8982ee, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 76b65abbe2347554f89d8de59df63d64, type: 3}
+    - target: {fileID: 512851042288967187, guid: d15b5ebf3ab68ec46acbc705cc8982ee, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 76b65abbe2347554f89d8de59df63d64, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d15b5ebf3ab68ec46acbc705cc8982ee, type: 3}
 --- !u!1 &1237348994
