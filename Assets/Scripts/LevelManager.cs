@@ -111,7 +111,7 @@ public class LevelManager : MonoBehaviour
         if (Score < 7500)
         {
             DialogManager.instance.gameObject.transform.GetChild(8).gameObject.SetActive(true);
-            EndText.text = "You still need to learn a lot Jaciel, that was shameful";
+            EndText.text = "You still need to learn a lot Michael, that was shameful";
         }
         if (Score > 7500 && Score < 12500)
         {
@@ -119,6 +119,25 @@ public class LevelManager : MonoBehaviour
             EndText.text = "That was pretty good for you, but you are not at my level";
         }
         if (Score >= 12500)
+        {
+            DialogManager.instance.gameObject.transform.GetChild(8).gameObject.SetActive(true);
+            EndText.text = "I did not expect you to be this good, that was marvelous";
+        }
+    }
+
+    public void DeployEndTextJapanEasy()
+    {
+        if (Score < 3500)
+        {
+            DialogManager.instance.gameObject.transform.GetChild(8).gameObject.SetActive(true);
+            EndText.text = "You still need to learn a lot Michael, that was shameful";
+        }
+        if (Score > 3500 && Score < 6000)
+        {
+            DialogManager.instance.gameObject.transform.GetChild(8).gameObject.SetActive(true);
+            EndText.text = "That was pretty good for you, but you are not at my level";
+        }
+        if (Score >= 6000)
         {
             DialogManager.instance.gameObject.transform.GetChild(8).gameObject.SetActive(true);
             EndText.text = "I did not expect you to be this good, that was marvelous";

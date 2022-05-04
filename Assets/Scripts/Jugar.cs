@@ -59,7 +59,7 @@ public class Jugar : MonoBehaviour
             }
         }
         yield return new WaitForSeconds(2);
-        LevelManager.instance.DeployEndText(); //Checarlo con el profe
+        LevelManager.instance.DeployEndTextJapanEasy(); //Checarlo con el profe
         yield return new WaitForSeconds(3);
         FinishLevel();
 
