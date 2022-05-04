@@ -37,6 +37,7 @@ public class LevelManager : MonoBehaviour
     public GameObject circulos;
     public GameObject Scorer;
     public GameObject HowToPlay;
+    public GameObject HowToPlay2;
     public GameObject PausePanel;
 
     private void Awake()
@@ -65,7 +66,11 @@ public class LevelManager : MonoBehaviour
         {
             HowToPlay.SetActive(false);
         }
-        
+        if (HowToPlay2.activeInHierarchy == true)
+        {
+            HowToPlay2.SetActive(false);
+        }
+
         LevelManager.instance.Song.Play();
         DialogManager.instance.gameObject.transform.GetChild(2).gameObject.SetActive(false); /*Boton Play*/
         DialogManager.instance.gameObject.transform.GetChild(3).gameObject.SetActive(false);
@@ -94,6 +99,11 @@ public class LevelManager : MonoBehaviour
     {
         DialogManager.instance.gameObject.transform.GetChild(3).gameObject.SetActive(false); /*Boton How To*/
         DialogManager.instance.gameObject.transform.GetChild(5).gameObject.SetActive(true); /* Panel How To Play*/
+    }
+    public void HowTo2()
+    {
+        DialogManager.instance.gameObject.transform.GetChild(5).gameObject.SetActive(false); /* Panel How To Play*/
+        DialogManager.instance.gameObject.transform.GetChild(11).gameObject.SetActive(true);
     }
 
     public void DeployEndText()
