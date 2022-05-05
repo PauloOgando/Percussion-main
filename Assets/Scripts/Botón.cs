@@ -5,7 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Botón : MonoBehaviour
 {
-
+    /*
+     * Autores: Equipo 1
+     * Paulo Ogando Gulias
+     * Eduardo Joel Cortez
+     * Maximiliano Benitez Ahumada
+     * Se encarga de cambiar las escenas del LogIn 
+     */
 
     public void LogIn()            // Cambiar a escena de Menu Principal
     {

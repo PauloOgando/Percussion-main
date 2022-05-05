@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class MovimientoPersonaje : MonoBehaviour
 {
+    /*Autores: Equipo 1
+     * Paulo Ogando Gulias
+     * Este script mueve al personaje principal en el arranque del nivel, lo mueve hasta chocar 
+     * con el collider del Taiko
+     */
     public static MovimientoPersonaje instance;
 
     private float velocidadX = 0;

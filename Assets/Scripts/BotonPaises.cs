@@ -5,7 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class BotonPaises : MonoBehaviour
 {
-
+    /* Autores: Equipo 1
+     * Paulo Ogando Gulias
+     * Christian Parrish Gutierrez
+     * Se encarga de cambiar las escenas en el menu principal
+     */
 
     public void IrMenu()            // Regresar al Menu
     {

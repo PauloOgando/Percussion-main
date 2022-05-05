@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class ChangeMasterAnimation : MonoBehaviour
 {
+    /*
+     * Autores: Equipo 1
+     * Paulo Ogando Gulias
+     * Christian Parrish Gutierrez
+     * Variacion del codigo ChangeAnimation para el segundo personaje de la escena, se creo
+     * porque teniendo solo un script, la animacion no corria. 
+     */
     public static ChangeMasterAnimation instance;
 
     private Animator animator;

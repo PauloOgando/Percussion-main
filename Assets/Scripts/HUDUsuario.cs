@@ -5,8 +5,12 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-/*Autor: Maximiliano Benítez Ahumada - A01752791
- * Manipular las imágenes de vida para que representen la salud del personaje*/
+/*Autor: Equipo 1
+ * Paulo Ogando Gulias
+ * Maximiliano Benitez Ahumada
+ * Christian Parrish
+ * Cambia el nombre de usuario al hacer logIn en el menu principal
+ */
 
 public class HUDUsuario : MonoBehaviour
 {

@@ -8,6 +8,17 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+
+    /* Autores: Equipo 1
+     * Paulo Ogando Gulias
+     * Eduardo Joel Cortez
+     * Maximiliano Benitez Ahumada
+     * Christian Parrish Gutierrez
+     * Jorge Isidro Blanco 
+     * Este script es el que maneja las variables, desplegables y escenas dentro del nivel, 
+     * asi como tambien se encarga de subir los datos a la base, terminar el nivel y llevar
+     * el conteo de puntos
+     */
     public static LevelManager instance;
 
     public AudioSource Song;
@@ -60,6 +71,7 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    //Es el metodo que arranca el nivel iniciando las corrutinas. 
     public void Jugar()
     {
         if (HowToPlay.activeInHierarchy == true)
@@ -79,6 +91,7 @@ public class LevelManager : MonoBehaviour
 
     }
 
+    //Proporciona un panel de pausa al nivel
     public void Pause()
     {
         isPaused = !isPaused;
@@ -95,17 +108,21 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    //Activa el panel de Como jugar dentro del nivel 
     public void HowTo()
     {
         DialogManager.instance.gameObject.transform.GetChild(3).gameObject.SetActive(false); /*Boton How To*/
         DialogManager.instance.gameObject.transform.GetChild(5).gameObject.SetActive(true); /* Panel How To Play*/
     }
+
+    //Cambia el panel de Como jugar, ya que consta de 2 paneles
     public void HowTo2()
     {
         DialogManager.instance.gameObject.transform.GetChild(5).gameObject.SetActive(false); /* Panel How To Play*/
         DialogManager.instance.gameObject.transform.GetChild(11).gameObject.SetActive(true);
     }
 
+    //Dependiendo de la puntuacion, despliega un texto distinto al final
     public void DeployEndText()
     {
         if (Score < 7500)
@@ -125,6 +142,7 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    //Dependiendo de la puntuacion en el nivel facil de Japon, despliega un texto distinto al final
     public void DeployEndTextJapanEasy()
     {
         if (Score < 3500)
@@ -144,6 +162,7 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    //Despliega el panel del final del nivel
     public void DeployEndPanel()
     {
         DialogManager.instance.gameObject.transform.GetChild(8).gameObject.SetActive(false);
@@ -151,17 +170,21 @@ public class LevelManager : MonoBehaviour
         FinalScore.text = "Your Final Score Was: " + Score.ToString();
     }
 
+    //Suma 200 puntos si el golpe fue perfecto 
     public void NiceHit()
     {
         Score += _NiceHit;
         ScoreText.text = Score.ToString();
     }
+
+    //Suma 100 puntos si el golpe fue normal
     public void Hit()
     {
         Score += _Hit;
         ScoreText.text = Score.ToString();
     }
 
+    //Resta 100 puntos si el usuario no aprieta la tecla a tiempo, y despliega el texto Fail!
     public void Fail()
     {
         Score -= _Hit;
@@ -170,6 +193,7 @@ public class LevelManager : MonoBehaviour
 
     }
 
+    //Corrutina que despliega el texto por .2 segundos
     public IEnumerator ShowFailText()
     {
         FailText.text = "Fail!";
@@ -178,10 +202,9 @@ public class LevelManager : MonoBehaviour
         DialogManager.instance.gameObject.transform.GetChild(7).gameObject.SetActive(false);
     }
 
+    //Termina el nivel registrando la hora en la que se regresa al menu principal 
     public void EndLevel()
     {
-        //Aqui iria el registro de la hora final 
-        //Registrar puntuacion final tambien
 
         //Registro de la hora final 
         horaFinS = System.DateTime.Now.Hour.ToString("00") + ":" + System.DateTime.Now.Minute.ToString("00") + ":" + System.DateTime.Now.Second.ToString("00");

@@ -8,6 +8,11 @@ using TMPro;
 public class DialogManager : MonoBehaviour
 {
 
+    //Autor: Pere Martra
+    // Permisos otorgados en su publicacion https://martra.uadla.com/como-crear-un-sistema-de-dialogos-para-unity/
+    //Modificado por: Paulo Ogando Gulias
+    //Este script se encarga de desplegar los dialogos de los personajes dentro de cada nivel.
+
     public static DialogManager instance;
 
     /*

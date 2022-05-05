@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class Impact : MonoBehaviour
 {
+    /*Autores: Equipo 1
+     * Paulo Ogando Gulias
+     * Este codigo es el que indica que tecla se debe presionar por tambor, asi como en cual 
+     * collider se presiono la tecla, porque dependiendo del collider se da cierto puntaje
+     */
+
     private bool Activator = false;
     private bool _NiceHit = false;
     private bool _NormalHit = false;
@@ -37,6 +43,7 @@ public class Impact : MonoBehaviour
         }
     }
 
+    //Indica que el golpe debe dar 200 puntos en el LevelManager
     public void PerfectHit()
     {
         LevelManager.instance.NiceHit();
@@ -44,6 +51,8 @@ public class Impact : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
 
     }
+    
+    //Indica que el golpe debe dar 100 puntos en el LevelManager
     public void NormalHit()
     {
         LevelManager.instance.Hit();
@@ -52,6 +61,7 @@ public class Impact : MonoBehaviour
 
     }
 
+    //Indica que se presiono la tecla, por lo que debe reiniciar los valores booleanos
     public void WasHit()
     {
         gameObject.GetComponent<SpriteRenderer>().enabled = true;
@@ -61,6 +71,7 @@ public class Impact : MonoBehaviour
         _NormalHit = false;
     }
 
+    //Indica que no se presiono la tecla, por lo que no debe dar puntos y debe restar 100 
     public void WasNotHit()
     {
         LevelManager.instance.Fail();
@@ -71,6 +82,7 @@ public class Impact : MonoBehaviour
         _NormalHit = false;
     }
 
+    //Maneja los 3 colliders, asi como el del circulo que se hace pequeño
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Activator")
